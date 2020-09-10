@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lazy-load-styling": {
+    "lazy-load-styles": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lazy-load-styling",
+            "outputPath": "dist/lazy-load-styles",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "lazy-load-styling:build"
+            "browserTarget": "lazy-load-styles:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "lazy-load-styling:build:production"
+              "browserTarget": "lazy-load-styles:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lazy-load-styling:build"
+            "browserTarget": "lazy-load-styles:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "lazy-load-styling:serve"
+            "devServerTarget": "lazy-load-styles:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "lazy-load-styling:serve:production"
+              "devServerTarget": "lazy-load-styles:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "lazy-load-styling"
+  "defaultProject": "lazy-load-styles"
 }
