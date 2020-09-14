@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { Feature1Module } from './features/feature1/feature1.module';
 
 const routes: Routes = [
   {
-    path: 'feature1',
-    loadChildren: () => import('./features/feature1/feature1.module').then(m => m.Feature1Module),
+    path: 'user-management',
+    loadChildren: () => import('./features/user-management/user-management.module').then(m => m.UserManagementModule),
+    pathMatch: 'prefix'
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./features/dashboard/dashboard.module').then(m => m.DashboardModule),
     pathMatch: 'prefix'
   },
 ];
@@ -15,3 +19,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
